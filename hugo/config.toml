@@ -1,0 +1,11 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My Obsidian Vault"
+theme = "book"
+
+[params]
+  BookSection = "*"
+
+[markup]
+[markup.tableOfContents]
+  startLevel = 1
