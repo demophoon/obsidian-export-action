@@ -1,0 +1,19 @@
+name: 'Render'
+description: 'Renders an obsidian vault as HTML in specified output directory'
+inputs:
+  vault-location:
+    description: 'Path to root of Obsidian vault'
+    required: true
+  vault-subdirectory:
+    description: 'Sub-directory within the Obsidian vault to export.'
+    required: true
+    default: '/'
+outputs:
+  html-path:
+    description: 'Path to html rendered vault'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.vault-location }}
+    - ${{ inputs.vault-subdirectory }}
